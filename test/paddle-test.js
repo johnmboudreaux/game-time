@@ -9,6 +9,7 @@ describe('Paddle', function () {
 
   it('should draw a paddle', function () {
     const paddle = new Paddle();
+    
 
   });
 
