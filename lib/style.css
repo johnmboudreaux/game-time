@@ -1,5 +1,15 @@
-canvas {
-  border: solid 1px black;
+body {
+  background-image: url(assets/arch.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#canvas {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-color: rgba(255, 255, 255, 0.5);
+
 }
 
 .game-over {
