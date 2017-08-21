@@ -11,9 +11,10 @@ describe('Paddle', function () {
     const paddle = new Paddle();
     
 
+
   });
 
-  it('should have a width and height', function() {
+  it.skip('should have a width and height', function() {
 
   });
 
