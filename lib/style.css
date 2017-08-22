@@ -12,6 +12,22 @@ body {
 
 }
 
+.game-start {
+  margin: 0 auto;
+  display: block;
+  margin-top: 1%;
+  width: 20%;
+  padding: 0.5%;
+  border-radius: 50%;
+  border-style: none;
+  font-size: 20px;
+  background-color: #FDD816;
+}
+
+.game-start:focus {
+  outline: none;
+}
+
 .game-over {
     height: 100vw;
     width: 100vw;
