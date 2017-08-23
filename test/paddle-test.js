@@ -31,3 +31,4 @@ describe('paddle testing', function() {
     assert.equal(paddle.height, 15)
   })
 
+})
