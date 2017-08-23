@@ -47,9 +47,6 @@ describe('ball testing', () => {
     var ball = new Ball()
     var paddle = new Paddle()
 
-
-
-
   })
 
 
