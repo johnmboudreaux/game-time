@@ -1,6 +1,7 @@
 const {assert, expect, should} = require('chai');
 const Brick = require('../lib/Brick.js');
 const Ball = require('../lib/Ball.js');
+const Game = require('../lib/Game.js');
 
 
 describe('brick testing', () => {
@@ -15,13 +16,13 @@ describe('brick testing', () => {
     assert.isObject(brick);
   });
 
-  it('should have an x ', function() {
+  it('should have an x', function() {
     var brick = new Brick('x');
 
     assert.equal(brick.x, 'x');
   })
 
-  it('should have a y ', function() {
+  it('should have a y', function() {
     var brick = new Brick('x', 'y');
 
     assert.equal(brick.x, 'x', 'y');
@@ -33,18 +34,6 @@ describe('brick testing', () => {
     assert.equal(brick.x, 'x', 'y', 'width');
   })
 
-  it.skip('should draw itself', function() {
-    var brick = new Brick();
-
-    console.log(brick.brickDrawn);
-    assert.equal(brick.brickDrawn, false);
-
-    brick.draw(context);
-    console.log(brick.brickDrawn);
-
-    assert.equal(brick.brickDrawn, true);
-  })
-
   it('should have a top, right, left and bottom edge', function() {
     var brick = new Brick();
 
@@ -52,6 +41,10 @@ describe('brick testing', () => {
     brick.rightEdge();
     brick.leftEdge();
     brick.bottomEdge();
+  })
+
+  it('should collide with the ball', function() {
+    
   })
 
 })
