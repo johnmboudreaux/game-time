@@ -2,7 +2,7 @@ var {assert, expect, should} = require('chai');
 
 var Paddle = require('../lib/Paddle.js');
 
-describe('paddle testing', () => {
+describe('paddle testing', function() {
   it('should be a function', () => {
     var paddle = new Paddle();
 
@@ -30,4 +30,4 @@ describe('paddle testing', () => {
 
     assert.equal(paddle.height, 15)
   })
-})
+

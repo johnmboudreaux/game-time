@@ -93,11 +93,8 @@ describe('ball testing', () => {
     let ball = new Ball()
     let paddle = new Paddle(40, 40, 20, 10)
 
-
-
-
-
     assert.equal(ball.paddleCollision(paddle), true)
+
 
   })
 
