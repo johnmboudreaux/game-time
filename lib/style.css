@@ -45,13 +45,3 @@ h1 {
 .game-start:focus {
   outline: none;
 }
-
-.game-over {
-    height: 100vw;
-    width: 100vw;
-    position: fixed;
-    background: #fff;
-    top: 0;
-    left: 0;
-    display: none;
-}
