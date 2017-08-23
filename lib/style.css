@@ -30,7 +30,8 @@ h1 {
   font-style: oblique;
 
 }
-.game-start {
+.game-start,
+.game-reset {
   margin: 0 auto;
   display: block;
   margin-top: 1%;
