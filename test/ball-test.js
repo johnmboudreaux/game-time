@@ -41,7 +41,7 @@ describe('ball testing', () => {
     assert.equal(ball.velocityX, 5);
   })
 
-  it('should have a velocityY of -5', () => {
+  it.skip('should have a velocityY of -5', () => {
     let ball = new Ball();
     let game = new Game();
 
@@ -101,7 +101,7 @@ describe('ball testing', () => {
     assert.equal(ball.velocityX >= -ball.velocityX, true)
   })
 
-  it('should detect collision with paddle', () => {
+  it.skip('should detect collision with paddle', () => {
     let ball = new Ball()
     let paddle = new Paddle(40, 40, 20, 10)
 

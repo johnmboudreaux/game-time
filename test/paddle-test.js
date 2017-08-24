@@ -1,33 +1,27 @@
-var {assert, expect, should} = require('chai');
+const { assert } = require('chai');
 
-var Paddle = require('../lib/Paddle.js');
+const Paddle = require('../lib/Paddle.js');
 
-describe('paddle testing', function() {
-  it('should be a function', () => {
-    var paddle = new Paddle();
+describe('paddle testing', () => {
+  const paddle = new Paddle(10, 10, 30);
 
+  it('should be an instance of Paddle', () => {
+    assert.equal(paddle instanceof (Paddle), true)
   })
 
-  it.skip('should have x coordinate', () => {
-    var paddle = new Paddle();
-
-
+  it('should have x coordinate', () => {
+    assert.equal(paddle.x, 10)
   })
 
-  it.skip('should have y coordinate', () => {
-    var paddle = new Paddle();
-
+  it('should have y coordinate', () => {
+    assert.equal(paddle.y, 10)
   })
 
   it('should have a width', () => {
-    var paddle = new Paddle();
-
-    assert.equal(paddle.width, 40);
+    assert.equal(paddle.width, 30);
   })
 
   it('should have a height', () => {
-    var paddle = new Paddle();
-
     assert.equal(paddle.height, 15)
   })
 
