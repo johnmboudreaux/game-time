@@ -4,6 +4,7 @@ const Ball = require('../lib/Ball.js');
 
 
 describe('ball testing', () => {
+  // Try using a beforeEach function to create a new instance of ball for each test
   const ball = new Ball(10, 100, 10, 5, -5);
 
   it('should be an instance of Ball', () => {
@@ -68,13 +69,18 @@ describe('ball testing', () => {
     assert.isFunction(ball.move);
   });
 
-  it('should have a move function', () => {
+  it.skip('should have a move function', () => {
     assert.isFunction(ball.move);
   });
 
   it('should have a paddle collision function', () => {
     assert.isFunction(ball.paddleCollision);
   })
+
+  // Pull in paddle, wall, and brick
+  // Instantiate new paddle, wall, brick with specific coordinate
+  // Instantiate new ball with specific coordinate (colliding with paddle, wall, brick)
+  // Assert that collision has occurred
 
   it('should have a wall collision function', () => {
     assert.isFunction(ball.wallCollision);
