@@ -1,60 +1,43 @@
-const {assert, expect, should} = require('chai');
+const { assert } = require('chai');
 const Ball = require('../lib/Ball.js');
-const Game = require('../lib/Game.js')
 const Paddle = require('../lib/Paddle.js')
+const Brick = require('../lib/Brick.js')
 
 
 describe('ball testing', () => {
-  it('should be a function', () => {
-    let ball = new Ball()
+  const ball = new Ball(10, 100, 10, 5, -5);
+  const canvas = { width: 200, height: 200}
+
+  it('should be an instance of Ball', () => {
+    assert.equal(ball instanceof Ball, true)
   })
 
   it('should have an x coordinate', () => {
-    let ball = new Ball()
-
-    assert.equal(ball.x);
+    assert.equal(ball.x, 10);
   })
 
   it('should have an y coordinate', () => {
-    let ball = new Ball();
-
-    assert.equal(ball.y);
-  })
-
-  it('should not have a speed before start', () => {
-    let ball = new Ball();
-
-    assert.equal(ball.velocityX === 0, true);
-    assert.equal(ball.velocityY === 0, true)
+    assert.equal(ball.y, 100);
   })
 
   it('should have a radius', () => {
-    let ball = new Ball();
-
     assert.equal(ball.radius, 10)
   })
 
-  it.skip('should have a velocityX of 5', () => {
-    let game = new Game();
-    let ball = new Ball();
-
+  it('should have a velocityX of 5', () => {
     assert.equal(ball.velocityX, 5);
   })
 
-  it.skip('should have a velocityY of -5', () => {
-    let ball = new Ball();
-    let game = new Game();
-
-    assert.equal(game.ball.velocityY, -5);
+  it('should have a velocityY of -5', () => {
+    assert.equal(ball.velocityY, -5);
   })
 
   it.skip('should move along the x axis', () => {
-    let ball = new Ball();
+    let ball = new Ball(50, 50, 10);
 
-
-    assert.equal(game.ball.velocityX <= 0, true);
+    assert.equal(ball.velocityX <= 0, true);
     ball.move()
-    assert.equal(game.ball.velocityX >= -ball.velocityX, true);
+    assert.equal(ball.velocityX >= -ball.velocityX, true);
   })
 
   it.skip('should move along the x and y axis', () => {
@@ -86,7 +69,6 @@ describe('ball testing', () => {
   })
 
   it('should hit and bounce off the top wall', () => {
-    let ball = new Ball(this.x, 10)
 
     assert.equal(ball.velocityY <= -ball.velocityY, true)
     ball.move();
@@ -94,27 +76,19 @@ describe('ball testing', () => {
   })
 
   it('should hit and bounce off the bottom wall', () => {
-    let ball = new Ball(this.x, 10)
 
     assert.equal(ball.velocityX >= -ball.velocityX, true)
     ball.move();
     assert.equal(ball.velocityX >= -ball.velocityX, true)
   })
 
-  it.skip('should detect collision with paddle', () => {
-    let ball = new Ball()
+  it('should detect collision', () => {
+
+    let ball = new Ball(5, 15, 5)
     let paddle = new Paddle(40, 40, 20, 10)
+    let brick = new Brick(0, 0, 10, 10)
 
-    ball.x = 50;
-    ball.y = 50;
-    ball.velocityY = 5;
+    assert.deepEqual(ball.registerCollisions(paddle, brick), true)
 
-    assert.deepEqual(ball.paddleCollision(paddle), true)
-
-    // expect(ball.collision(canvas, paddle)).to.deep.equal({ collision: true,
-    //  x: false,
-    //  y: true });
-  });
-
-
+  })
 })
