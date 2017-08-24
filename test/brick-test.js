@@ -19,7 +19,7 @@ describe('brick testing', () => {
   it('should have an x', () => {
     let brick = new Brick('x', 'y');
 
-    assert.equal(brick.x, 'x');
+    assert.deepEqual(brick.x, 'x');
   });
 
   it('should have a y', () => {
@@ -31,7 +31,7 @@ describe('brick testing', () => {
   it('should have a width', () => {
     let brick = new Brick('x', 'y', 'width');
 
-    assert.equal(brick.x, 'x', 'y', 'width');
+    assert.equal(brick.width, 'width');
   });
 
   it('should have a top, right, left and bottom edge', () => {
