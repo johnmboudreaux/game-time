@@ -59,7 +59,7 @@ it.skip('should collide with ball', () => {
 
 it('should not move off the left side of the canvas', () => {
   const paddle = new Paddle(5, 20, 30);
-
+ 
   paddle.leftEdge({ width: 600 }, -1, true);
   assert.equal(paddle.x, 5);
 });
