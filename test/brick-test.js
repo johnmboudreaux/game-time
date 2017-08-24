@@ -1,9 +1,10 @@
-const {
-  assert
-} = require('chai');
+const { assert } = require('chai');
 const Brick = require('../lib/Brick.js');
+let brick;
 
-
+beforeEach(() => {
+  brick = new Brick();
+})
 
 describe('brick testing', () => {
   let brick = new Brick();
