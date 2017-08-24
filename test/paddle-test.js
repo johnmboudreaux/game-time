@@ -1,6 +1,4 @@
-const {
-  assert
-} = require('chai');
+const {assert} = require('chai');
 const Paddle = require('../lib/Paddle.js');
 
 // Fix tests for Paddle :)
@@ -23,7 +21,7 @@ describe('paddle testing', () => {
   assert.isFunction(Paddle);
 
   it('should be an instance of Paddle', () => {
-    assert.equal(this.paddle instanceof(Paddle), true);
+    assert.equal(this.paddle instanceof (Paddle), true);
   });
 
   it('should have x coordinate', () => {
@@ -81,4 +79,3 @@ describe('paddle testing', () => {
     assert.equal(paddle.x, 5);
   });
 })
-
