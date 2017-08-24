@@ -1,14 +1,24 @@
 const { assert } = require('chai');
 const Ball = require('../lib/Ball.js');
+<<<<<<< HEAD
 const Paddle = require('../lib/Paddle.js');
 const Brick = require('../lib/Brick.js');
 const Game = require('../lib/Game.js');
 
 
-describe('ball testing', () => {
-  // Try using a beforeEach function to create a new instance of ball for each test
-  const ball = new Ball(10, 100, 10, 5, -5);
+||||||| merged common ancestors
 
+
+
+=======
+
+>>>>>>> cc7d637f90b4440aa707b793ee53626ebb51742d
+describe('ball testing', () => {
+  let ball;
+
+  beforeEach(() => {
+    ball = new Ball(10, 100, 10, 5, -5);
+  })
   it('should be an instance of Ball', () => {
     assert.equal(ball instanceof Ball, true);
   });
@@ -68,10 +78,6 @@ describe('ball testing', () => {
   });
 
   it('should have a move function', () => {
-    assert.isFunction(ball.move);
-  });
-
-  it.skip('should have a move function', () => {
     assert.isFunction(ball.move);
   });
 
