@@ -19,13 +19,13 @@ describe('paddle testing', function() {
 
   })
 
-  it.skip('should have a width', () => {
+  it('should have a width', () => {
     var paddle = new Paddle();
 
     assert.equal(paddle.width, 40);
   })
 
-  it.skip('should have a height', () => {
+  it('should have a height', () => {
     var paddle = new Paddle();
 
     assert.equal(paddle.height, 15)
