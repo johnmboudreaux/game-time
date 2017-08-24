@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+const {assert} = require('chai');
+||||||| merged common ancestors
+const {
+  assert
+} = require('chai');
+=======
 const { assert } = require('chai');
+>>>>>>> cc7d637f90b4440aa707b793ee53626ebb51742d
 const Paddle = require('../lib/Paddle.js');
 
 describe('Paddle test', () => {
@@ -9,7 +17,13 @@ describe('Paddle test', () => {
   })
 
   it('should be an instance of Paddle', () => {
+<<<<<<< HEAD
+    assert.equal(this.paddle instanceof (Paddle), true);
+||||||| merged common ancestors
+    assert.equal(this.paddle instanceof(Paddle), true);
+=======
     assert.equal(paddle instanceof Paddle, true);
+>>>>>>> cc7d637f90b4440aa707b793ee53626ebb51742d
   });
 
   it('should have x coordinate', () => {
