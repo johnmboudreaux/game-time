@@ -2,7 +2,6 @@ const { assert } = require('chai');
 const Ball = require('../lib/Ball.js');
 const Paddle = require('../lib/Paddle.js');
 const Brick = require('../lib/Brick.js');
-const Game = require('../lib/Game.js');
 
 describe('ball testing', () => {
   let ball;
@@ -85,13 +84,19 @@ describe('ball testing', () => {
     assert.equal(ball.y, 11);
     assert.equal(paddle.y, 10);
     assert.equal(paddle.x, 10);
-    // Pull in paddle, wall, and brick
-    // Instantiate new paddle, wall, brick with specific coordinate
-    // Instantiate new ball with specific coordinate (colliding with paddle, wall, brick)
-    // Assert that collision has occurred
   })
 
+  it('should collide with the bricks', function() {
+    let ball = new Ball(11, 11, 50)
+    let brick = new Brick(10, 10)
 
+    ball.brickCollision(brick);
+
+    assert.equal(ball.x, 11);
+    assert.equal(ball.y, 11);
+    assert.equal(brick.x, 10);
+    assert.equal(brick.x, 10);
+  })
 
   it('should have a wall collision function', () => {
     assert.isFunction(ball.wallCollision);

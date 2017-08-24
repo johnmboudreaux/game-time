@@ -1,11 +1,5 @@
 const { assert } = require('chai');
 const Paddle = require('../lib/Paddle.js');
-const Ball = require('../lib/Ball.js');
-const Brick = require('../lib/Brick.js');
-const Game = require('../lib/Game.js');
-
-
-
 
 describe('Paddle testing', () => {
   let paddle;
