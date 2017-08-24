@@ -27,16 +27,24 @@ h1 {
   font-size: 50px;
   margin: 0;
   color: #848484;
-  font-style: oblique;
 
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.game-start {
+  margin-right: 20px;
 }
 .game-start,
 .game-reset {
-  margin: 0 auto;
-  display: block;
-  margin-top: 1%;
-  width: 20%;
-  padding: 0.5%;
+
+  margin-top: 20px;
+  width: 200px;
+  padding: 10px;;
   border-style: none;
   font-size: 20px;
   background-color: #848484;

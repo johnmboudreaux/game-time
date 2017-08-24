@@ -1,47 +1,65 @@
-var {assert, expect, should} = require('chai');
-
-var Paddle = require('../lib/Paddle.js');
+const { assert } = require('chai');
+const Paddle = require('../lib/Paddle.js');
 var Ball = require('../lib/Ball.js');
 
-describe('paddle testing', function() {
-  it('should be a function', () => {
-    // var paddle = new Paddle();
 
-    assert.isFunction(Paddle);
+describe('paddle testing', () => {
+  const paddle = new Paddle(10, 10, 30);
 
-  })
+  assert.isFunction(Paddle);
+})
 
-  it('should have x coordinate', () => {
-    var paddle = new Paddle('x');
+it('should be an instance of Paddle', () => {
+  assert.equal(this.paddle instanceof (Paddle), true);
+});
 
-    assert.equal(paddle.x, 'x');
-  })
+it('should have x coordinate', () => {
+  var paddle = new Paddle('x');
+  assert.equal(this.paddle.x, 'x');
+})
 
-  it('should have y coordinate', () => {
-    var paddle = new Paddle('x', 'y');
+it('should have y coordinate', () => {
+  assert.equal(this.paddle.y, 10);
+});
 
-    assert.equal(paddle.y, 'y');
-    assert.isDefined(paddle.y);
-  })
+it('should have a height', () => {
+  assert.equal(this.paddle.height, 15)
+});
+
+it('should have a width', () => {
+  assert.equal(this.paddle.width, 30);
+});
+
+it('should have y coordinate', () => {
+  var paddle = new Paddle('x', 'y');
+
+  assert.equal(this.paddle.y, 'y');
+  assert.isDefined(this.paddle.y);
+})
+
+it('should have a draw function', () => {
+  assert.isFunction(this.paddle.draw);
+});
 
 
-  it.skip('should have a width', () => {
-    var paddle = new Paddle();
+
+it('should not move off the right side of the canvas', () => {
+  const paddle = new Paddle(570, 20, 30);
+
+  paddle.rightEdge({ width: 600 }, 1, true);
+  assert.equal(paddle.x, 570);
+});
 
 
-  })
-
-  it.skip('should have a height', () => {
-    var paddle = new Paddle();
-
-
-  })
-
-  it.skip('should collide with ball', () => {
-    var paddle = new Paddle();
-    var ball = new Ball();
-
-
-  })
+it.skip('should collide with ball', () => {
+  var paddle = new Paddle();
+  var ball = new Ball();
 
 })
+
+it('should not move off the left side of the canvas', () => {
+  const paddle = new Paddle(5, 20, 30);
+
+  paddle.leftEdge({ width: 600 }, -1, true);
+  assert.equal(paddle.x, 5);
+});
