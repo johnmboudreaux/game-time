@@ -76,7 +76,7 @@ describe('ball testing', () => {
     assert.isFunction(ball.paddleCollision);
   })
 
-  it.only('should collide with paddle', function() {
+  it('should collide with paddle', function() {
     let paddle = new Paddle(10, 10);
     let ball = new Ball(11, 11, 50)
 
