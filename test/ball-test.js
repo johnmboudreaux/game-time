@@ -30,7 +30,6 @@ describe('ball testing', () => {
     assert.equal(ball.velocityY, -5);
   });
 
-
   it('should move along the x and y axis', () => {
     let ball = new Ball();
 
@@ -42,33 +41,35 @@ describe('ball testing', () => {
   });
 
   it('should hit and bounce off right wall', () => {
-    let ball = new Ball(500);
-
     assert.equal(ball.velocityX >= -ball.velocityX, true);
     ball.move()
     assert.equal(ball.velocityY <= -ball.velocityY, true);
   });
 
   it('should hit and bounce off left wall', () => {
-    let ball = new Ball(10);
-
     assert.equal(ball.velocityX >= -ball.velocityX, true);
     ball.move();
     assert.equal(ball.velocityY <= -ball.velocityY, true);
   });
 
   it('should hit and bounce off the top wall', () => {
-
     assert.equal(ball.velocityY <= -ball.velocityY, true);
     ball.move();
     assert.equal(ball.velocityY <= -ball.velocityY, true);
   });
 
   it('should hit and bounce off the bottom wall', () => {
-
     assert.equal(ball.velocityX >= -ball.velocityX, true);
     ball.move();
     assert.equal(ball.velocityX >= -ball.velocityX, true);
+  });
+
+  it('should have a move function', () => {
+    assert.isFunction(ball.move);
+  });
+
+  it('should have a move function', () => {
+    assert.isFunction(ball.move);
   });
 
   it('should have a paddle collision function', () => {
@@ -78,5 +79,9 @@ describe('ball testing', () => {
   it('should have a wall collision function', () => {
     assert.isFunction(ball.wallCollision);
   });
+
+  it('should have a brick collision function', () => {
+    assert.isFunction(ball.brickCollision);
+  })
 
 });
