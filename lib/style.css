@@ -3,7 +3,7 @@
 
 }
 body {
-  background-image: url(assets/citybackground.jpg);
+  background-image: url('../lib/assets/desert.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -11,8 +11,9 @@ body {
 #canvas {
   display: block;
   margin: 0 auto;
-  margin-top: 1%;
-  background-color: rgba(255, 255, 255, 0.25);
+  margin-top: 60px;
+  background: #282524;
+  /*background-color: rgba(255, 255, 255, 0.25);*/
 
 }
 
@@ -23,18 +24,27 @@ body {
   flex-direction: column;
 }
 
-h1 {
+/*h1 {
   font-size: 50px;
   margin: 0;
-  color: #848484;
+  color: #fff;
 
-}
+}*/
 .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
+
+button{
+  color: #FFF;
+}
+
+button:hover{
+  cursor: pointer;
+  background: #C13838;
+}
+
 
 .game-start {
   margin-right: 20px;
@@ -47,7 +57,8 @@ h1 {
   padding: 10px;;
   border-style: none;
   font-size: 20px;
-  background-color: #848484;
+  background-color: #282524;
+
 }
 
 .game-start:focus {

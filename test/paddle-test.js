@@ -41,5 +41,5 @@ describe('paddle testing', () => {
 
     paddle.leftEdge({ width: 600 }, -1, true);
     assert.equal(paddle.x, 5);
-  });
+  });  
 });
