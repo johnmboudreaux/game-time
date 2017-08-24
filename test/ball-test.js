@@ -25,27 +25,34 @@ describe('ball testing', () => {
     assert.equal(ball.radius, 10)
   })
 
-  it('should have a velocityX of 5', () => {
+  it.skip('should have a velocityX of 5', () => {
+    let game = new Game();
+    console.log(game);
     let ball = new Ball();
+    console.log(ball);
 
+    th();
     assert.equal(ball.velocityX, 5);
   })
 
   it('should have a velocityY of -5', () => {
     let ball = new Ball();
+    let game = new Game();
 
-    assert.equal(ball.velocityY, -5);
+    assert.equal(game.ball.velocityY, -5);
   })
 
   it('should move along the x axis', () => {
     let ball = new Ball();
+    let game = new Game();
 
-    assert.equal(ball.velocityX <= 0, true);
+
+    assert.equal(game.ball.velocityX <= 0, true);
     ball.move()
-    assert.equal(ball.velocityX >= -ball.velocityX, true);
+    assert.equal(game.ball.velocityX >= -ball.velocityX, true);
   })
 
-  it.skip('should move along the x and y axis', () => {
+  it('should move along the x and y axis', () => {
     let ball = new Ball();
 
 
@@ -57,7 +64,7 @@ describe('ball testing', () => {
 
   })
 
-  it('should hit and bounce off right wall', () => {
+  it.skip('should hit and bounce off right wall', () => {
     let ball = new Ball(500);
 
     assert.equal(ball.velocityX >= -ball.velocityX, true)
@@ -65,7 +72,7 @@ describe('ball testing', () => {
     assert.equal(ball.velocityY <= -ball.velocityY, true)
   })
 
-  it('should hit and bounce off left wall', () => {
+  it.skip('should hit and bounce off left wall', () => {
     let ball = new Ball(10);
 
     assert.equal(ball.velocityX >= -ball.velocityX, true)
@@ -73,7 +80,7 @@ describe('ball testing', () => {
     assert.equal(ball.velocityY <= -ball.velocityY, true)
   })
 
-  it('should hit and bounce off the top wall', () => {
+  it.skip('should hit and bounce off the top wall', () => {
     let ball = new Ball(this.x, 10)
 
     assert.equal(ball.velocityY <= -ball.velocityY, true)
@@ -81,7 +88,7 @@ describe('ball testing', () => {
     assert.equal(ball.velocityY <= -ball.velocityY, true)
   })
 
-  it('should hit and bounce off the bottom wall', () => {
+  it.skip('should hit and bounce off the bottom wall', () => {
     let ball = new Ball(this.x, 10)
 
     assert.equal(ball.velocityX >= -ball.velocityX, true)
