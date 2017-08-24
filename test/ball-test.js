@@ -1,18 +1,9 @@
 const { assert } = require('chai');
 const Ball = require('../lib/Ball.js');
-<<<<<<< HEAD
 const Paddle = require('../lib/Paddle.js');
 const Brick = require('../lib/Brick.js');
 const Game = require('../lib/Game.js');
 
-
-||||||| merged common ancestors
-
-
-
-=======
-
->>>>>>> cc7d637f90b4440aa707b793ee53626ebb51742d
 describe('ball testing', () => {
   let ball;
 
