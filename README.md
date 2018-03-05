@@ -5,6 +5,6 @@ A simple app to break bricks and kill time. It has multiple levels ihn which the
 ## Contributors:
 
 >Francy Lang
-John Boudreaux
+>John Boudreaux
 
 ## BC was constructed using JavaScript, HTML Canvas and CSS3 
